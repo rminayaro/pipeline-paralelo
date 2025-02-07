@@ -10,14 +10,14 @@ pipeline {
 
         stage('Construir y Probar') {
             steps {
-                sh 'echo "Compilando código..."'
-                sh 'echo "Ejecutando pruebas..."'
+                bat 'echo "Compilando código..."'
+                bat 'echo "Ejecutando pruebas..."'
             }
         }
 
         stage('Subir a Nexus') {
             steps {
-                sh 'echo "Subiendo imagen a Nexus..."'
+                bat 'echo "Subiendo imagen a Nexus..."'
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
                 branch 'main'
             }
             steps {
-                sh 'echo "Desplegando en el servidor..."'
+                bat 'echo "Desplegando en el servidor..."'
             }
         }
     }
