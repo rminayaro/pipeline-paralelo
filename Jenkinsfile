@@ -31,15 +31,15 @@ pipeline {
                         protocol: 'http',
                         nexusUrl: 'http://localhost:8081',
                         groupId: 'com.example',
-                        artifactId: 'mi-app',
+                        artifactId: 'tuimagen',  
                         version: '1.0',
                         repository: 'docker-releases',
                         credentialsId: 'nexus-credenciales',
-                        artifactId: 'tuimagen',
                         classifier: '',
                         extension: 'tar.gz',
                         file: "target/tuimagen:version.tar.gz"
                     )
+
                 }
             }
         }
